@@ -14,13 +14,13 @@ def looking_for_files(path: pathlib.Path, excluded_files: list, included_files: 
         for item in dir_list:
             p = path / item
             if p.is_dir():
-                looking_for_files(p,a,b)
+                looking_for_files(p, excluded_files, included_files)
             else:
                 included_files.append(item)
     except PermissionError as pe:
         excluded_item = (str(path).rsplit('\\', 1))[1]
         excluded_files.append(excluded_item)
-    return excluded_files, included_files
+    #return excluded_files, included_files -  funkce nemusi nic vracet (radek 20), protoze listy se predavaji odkazem a navratova hodnota se nikde nepouziva
 
 a = []
 b = []
