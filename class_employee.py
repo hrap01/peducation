@@ -42,28 +42,28 @@ tomas = Employee('Tomas', 'Danek', 30, True)
 # třeba tým qa automation, zavolala bych metodu add employee a přidala bych tam všechny tři a poté metoda náhodně vyhodit jednoho z týmu
 # když budu dělat třídu týmu, tak když tu třídu vyrobím, tak si ty lidi budu muset udržovat, takže v konstruktoru si předpřipravit prázdný list
 #
-# class Team_of_employee:
-#     def __init__(self, name: str, surname: str):
-#         self.employee_list = []
-#         self.name = name
-#         self.surname = surname
-#
-#     def get_fullname(self) -> str:
-#         return self.name + ' ' + self.surname
-#
-#     def add_employee(self) -> list:
-#         self.employee_list.append(self.get_fullname())
-#         return self.employee_list
-#
-#     def russioan_rulet(self) -> list:
-#         self.employee_list.pop(1)
-#         return self.employee_list
-#
-# avla = Team_of_employee('Pavla', 'Hrabcova')
-# vla = Team_of_employee('Pav', 'Hrab')
-# print(avla.add_employee())
-# print(vla.add_employee())
-# #print(vla.russioan_rulet())
+class Team_of_employee:
+    def __init__(self, name: str, surname: str):
+        self.employee_list = []
+        self.name = name
+        self.surname = surname
+
+    def get_fullname(self) -> str:
+        return self.name + ' ' + self.surname
+
+    def add_employee(self) -> list:
+        self.employee_list.append(self.get_fullname())
+        return self.employee_list
+
+    def russioan_rulet(self) -> list:
+        self.employee_list.pop(1)
+        return self.employee_list
+
+avla = Team_of_employee('Pavla', 'Hrabcova')
+vla = Team_of_employee('Pav', 'Hrab')
+print(avla.add_employee())
+print(vla.add_employee())
+#print(vla.russioan_rulet())
 
 
 
