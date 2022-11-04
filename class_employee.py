@@ -2,9 +2,9 @@
 
 class Employee: #zaciname vzdy velkym pismenem
     number_of_employees = 0
-    #employer = 'Avast' #class promenna
+    #employer = 'Avast' #class promenna- taky atribut
 
-    def __init__(self, name: str, surname: str, salary: int, active: bool):
+    def __init__(self, name: str, surname: str, salary: int, active: bool): #atribut
         self.name = name
         self.surname = surname
         self.salary = salary

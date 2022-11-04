@@ -1,3 +1,4 @@
+#jak rovnou zkontrolovat jestli vložená informace je taková jakou chceme
 
 class Domain:
     def __init__(self, domain):
