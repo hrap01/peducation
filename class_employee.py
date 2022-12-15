@@ -35,6 +35,11 @@ class Employee: #zaciname vzdy velkym pismenem
     def get_salary(self):
         return self.salary
 
+    def __eq__(self, other):
+        if isinstance(other, Employee):
+            return self.name == other.name
+        raise TypeError(f'je to nesmysl: {type(other)}')
+
     def __repr__(self):
         return self.get_fullname()
         #diky tomu to pekne vytiskneme jeste je metora str, ktera se pouzije kdyt zavolame str(objekt)
@@ -43,7 +48,7 @@ class Employee: #zaciname vzdy velkym pismenem
         return f"{self.name}"
 
 
-# lukas = Employee('Lukas', 'Kucera', 10, True)
+lukas = Employee('Lukas', 'Kucera', 10, True)
 # print(lukas.get_fullname())
 # print(lukas.get_salary())
 # lukas.increase_salary_percentage(50)
@@ -54,4 +59,7 @@ class Employee: #zaciname vzdy velkym pismenem
 # #print(Employee.get_fullname(self=lukas))
 #
 # pavla = Employee('Pavla', 'Hrabcova', 20, True)
-# tomas = Employee('Tomas', 'Danek', 30, True)
+tomas = Employee('Tomas', 'Danek', 30, True)
+lukas2 = Employee('Lukas', 'Kucera', 10, True)
+
+print (lukas == 'a')
