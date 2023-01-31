@@ -15,6 +15,10 @@ class Employee: #zaciname vzdy velkym pismenem
 #     def change_employer(cls, new_employer: str) -> None:
 #         cls.employer = new_employer
 
+    @staticmethod
+    def get_upper_str():
+        pass
+
     @classmethod
     def get_number_of_employees(cls) -> int:
         return cls.number_of_employees
